@@ -59,7 +59,7 @@ app.post("/register", async (req, res) => {
                     });
                     let token = jwt.sign({ email: email, userid: newUser._id }, "shhhh");
                     res.cookie("token", token);
-                    res.status(201).send("User registered successfully");
+                    res.render("login")
                 } catch (error) {
                     res.status(500).send("Error creating user");
                 }

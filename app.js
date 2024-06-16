@@ -20,6 +20,20 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get("/registerlogin", (req, res) => {
+    res.render("login");
+});
+
+
+app.get("/pphoto", (req, res) => {
+    res.render("profileup");
+});
+
+app.get("/res", (req, res) => {
+    res.render("index");
+});
+
+
 app.get("/logout", (req, res) => {
     res.clearCookie("token");
     res.redirect("/login");
